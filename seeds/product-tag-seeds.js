@@ -1,3 +1,5 @@
+// Start of JS file
+// Seeds for the products + tags; connecting IDs.
 const { ProductTag } = require('../models');
 
 const productTagData = [
@@ -54,3 +56,4 @@ const productTagData = [
 const seedProductTags = () => ProductTag.bulkCreate(productTagData);
 
 module.exports = seedProductTags;
+// End of JS file

@@ -1,3 +1,5 @@
+// Start of JS file
+// Category model for site.
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
@@ -18,3 +20,4 @@ Category.init(
 );
 
 module.exports = Category;
+// End of JS file

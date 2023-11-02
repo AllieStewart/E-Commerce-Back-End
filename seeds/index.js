@@ -1,3 +1,6 @@
+// Start of JS file
+// Index file to seed the database with the files
+// from /seeds.
 const seedCategories = require('./category-seeds');
 const seedProducts = require('./product-seeds');
 const seedTags = require('./tag-seeds');
@@ -24,3 +27,4 @@ const seedAll = async () => {
 };
 
 seedAll();
+// End of JS file

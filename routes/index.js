@@ -1,3 +1,5 @@
+// Start of JS file
+// Index file to execute routes in /api.
 const router = require('express').Router();
 const apiRoutes = require('./api');
 
@@ -8,3 +10,4 @@ router.use((req, res) => {
 });
 
 module.exports = router;
+// End of JS file

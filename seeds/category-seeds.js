@@ -1,3 +1,5 @@
+// Start of JS file
+// Seeds for the categories on the site.
 const { Category } = require('../models');
 
 const categoryData = [
@@ -21,3 +23,4 @@ const categoryData = [
 const seedCategories = () => Category.bulkCreate(categoryData);
 
 module.exports = seedCategories;
+// End of JS file

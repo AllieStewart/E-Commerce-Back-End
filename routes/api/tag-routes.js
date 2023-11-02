@@ -1,3 +1,5 @@
+// Start of JS file
+// File for tag routes.
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
@@ -26,3 +28,4 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
+// End of JS file

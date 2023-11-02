@@ -1,3 +1,5 @@
+// Start of JS file
+// Product tag model for site.
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
@@ -18,3 +20,4 @@ ProductTag.init(
 );
 
 module.exports = ProductTag;
+// End of JS file

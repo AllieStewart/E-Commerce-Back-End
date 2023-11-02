@@ -1,3 +1,5 @@
+// Start of JS file
+// Product model for site.
 // import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
@@ -21,3 +23,4 @@ Product.init(
 );
 
 module.exports = Product;
+// End of JS file

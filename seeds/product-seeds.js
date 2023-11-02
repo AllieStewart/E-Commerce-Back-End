@@ -1,3 +1,5 @@
+// Start of JS file
+// Seeds for products on site.
 const { Product } = require('../models');
 
 const productData = [
@@ -36,3 +38,4 @@ const productData = [
 const seedProducts = () => Product.bulkCreate(productData);
 
 module.exports = seedProducts;
+// End of JS file

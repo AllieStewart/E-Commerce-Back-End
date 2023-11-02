@@ -21,7 +21,7 @@ Challenge 13 coursework for UT bootcamp. Uses Express.js, MySQL2, Sequelize, Dot
 
 ## Usage
 Simply click on the link and watch the magic happen. </br>  
-Link to the website: https://alliestewart.github.io/###/ </br>
+Link to the website: --- </br>
 
 ## What I Have Learned
 ---Insert stuff here--- </br>

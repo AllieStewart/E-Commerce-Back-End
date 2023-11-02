@@ -1,3 +1,5 @@
+// Start of JS file
+// Index file to execute the models files.
 // import models
 const Product = require('./Product');
 const Category = require('./Category');
@@ -18,3 +20,4 @@ module.exports = {
   Tag,
   ProductTag,
 };
+// End of JS file

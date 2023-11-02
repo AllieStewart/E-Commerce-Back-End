@@ -1,3 +1,5 @@
+// Start of JS file
+// Seeds for the tags on the site.
 const { Tag } = require('../models');
 
 const tagData = [
@@ -30,3 +32,4 @@ const tagData = [
 const seedTags = () => Tag.bulkCreate(tagData);
 
 module.exports = seedTags;
+// End of JS file

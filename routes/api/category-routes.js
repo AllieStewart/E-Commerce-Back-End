@@ -63,7 +63,6 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-  // TODO:
   // update a category by its `id` value
   Category.update(req.body, {
     where: {
@@ -71,38 +70,9 @@ router.put('/:id', async (req, res) => {
     },
   })
     .then((category) => {
-      // if (req.body.tagIds && req.body.tagIds.length) {
-
-      //   ProductTag.findAll({
-      //     where: { product_id: req.params.id }
-      //   }).then((productTags) => {
-      //     // create filtered list of new tag_ids
-      //     const productTagIds = productTags.map(({ tag_id }) => tag_id);
-      //     const newProductTags = req.body.tagIds
-      //       .filter((tag_id) => !productTagIds.includes(tag_id))
-      //       .map((tag_id) => {
-      //         return {
-      //           product_id: req.params.id,
-      //           tag_id,
-      //         };
-      //       });
-
-      //     // figure out which ones to remove
-      //     const productTagsToRemove = productTags
-      //       .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
-      //       .map(({ id }) => id);
-      //     // run both actions
-      //     return Promise.all([
-      //       Category.destroy({ where: { id: productTagsToRemove } }),
-      //       Category.bulkCreate(newProductTags),
-      //     ]);
-      //   });
-      // }
-
-      return res.json(category);
+      res.status(200).json(category);
     })
     .catch((err) => {
-      // console.log(err);
       res.status(400).json(err);
     });
 });

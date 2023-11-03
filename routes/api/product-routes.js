@@ -58,6 +58,7 @@ router.post('/', async (req, res) => {
       tagIds: [1, 2, 3, 4]
     }
   */
+ // TODO: Anything to fix?
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model

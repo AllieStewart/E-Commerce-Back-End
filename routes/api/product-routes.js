@@ -13,7 +13,16 @@ router.get('/', async (req, res) => {
   {
     const productData = await Product.findAll( 
     {
-      include: [{ model: Category, Tag }],
+      include: 
+      [
+        { 
+          model: Category
+        },
+        {
+          model: Tag,
+          through: ProductTag
+        }
+      ],
     });
 
     res.status(200).json(productData);
@@ -32,7 +41,16 @@ router.get('/:id', async (req, res) => {
   {
     const productData = await Product.findByPk(req.params.id, 
     {
-      include: [{ model: Category, Tag }],
+      include:
+      [
+        { 
+          model: Category
+        },
+        {
+          model: Tag,
+          through: ProductTag
+        }
+      ],
     });
     
     if (!productData) 
@@ -90,9 +108,8 @@ router.put('/:id', async (req, res) => {
   })
     .then((product) => {
       if (req.body.tagIds && req.body.tagIds.length) {
-
         ProductTag.findAll({
-          where: { product_id: req.params.id }
+        where: { product_id: req.params.id }
         }).then((productTags) => {
           // create filtered list of new tag_ids
           const productTagIds = productTags.map(({ tag_id }) => tag_id);
@@ -104,7 +121,6 @@ router.put('/:id', async (req, res) => {
                 tag_id,
               };
             });
-
           // figure out which ones to remove
           const productTagsToRemove = productTags
             .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))

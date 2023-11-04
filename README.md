@@ -39,53 +39,40 @@ functionality on three routes (Category, Product, and Tag), with ThunderClient. 
 ---Tag data in MySQL Workbench--- </br>
 ![Alt text](screenshots/6_tag_data.png)
 
--------------------------------------------------------------------
----GET all Category--- </br>
+---Categories--- </br>
+![Alt text](screenshots/7_category_CRUD.png)
 
----GET Category by id--- </br>
+---Products--- </br>
+![Alt text](screenshots/8_product_CRUD.png)
 
----PUT (Update) Category--- </br>
+---Tags--- </br>
+![Alt text](screenshots/9_tag_CRUD.png)
 
----DEL Category by id--- </br>
+---ThunderClient GET Test (of many)--- </br>
+![Alt text](screenshots/10_GET_test.png)
 
----POST new Category--- </br>
+---ThunderClient DEL Test (of many)--- </br>
+![Alt text](screenshots/11_DEL_test.png)
 
--------------------------------------------------------------------
----GET all Product--- </br>
+---ThunderClient PUT Test (of many)--- </br>
+![Alt text](screenshots/12_PUT_test.png)
 
----GET Product by id--- </br>
-
----PUT (Update) Product--- </br>
-
----DEL Product by id--- </br>
-
----POST new Product--- </br>
-
--------------------------------------------------------------------
----GET all Tag--- </br>
-
----GET Tag by id--- </br>
-
----PUT (Update) Tag--- </br>
-
----DEL Tag by id--- </br>
-
----POST new Tag--- </br>
-
--------------------------------------------------------------------
+---ThunderClient POST Test (of many)--- </br>
+![Alt text](screenshots/13_POST_test.png)
 
 ## Usage
 Simply click on the link and watch the magic happen. </br>  
-Link to the website: --- </br>
+Link to the website: https://drive.google.com/file/d/1CK47ZDP_lPZwOIoNg01Abys3q37WaQL4/view </br>
 
 ## What I Have Learned
 I have learned about using Node to seed directly inside of the command line terminal, </br>
+being able to construct GET, PUT, POST, and DELETE functions for each of the routes, </br>
 as well as testing routes with ThunderClient to see if CRUD works properly. </br>
 
 ## Credits
 Made by Allie Stewart. </br>
 Helpful notes from the module 13 activities, as well as </br>
-help from https://stackoverflow.com.
+help from https://stackoverflow.com. </br>
 
 ## Licenses
 Please refer to the LICENSE in the repository. </br>

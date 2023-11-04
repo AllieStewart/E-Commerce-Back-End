@@ -53,10 +53,9 @@ router.post('/', async (req, res) => {
   // create a new category
     await Category.create(
     {
-      category_id: req.body.category_id,
-    }).then((newCatData) => res.json(newCatData))
-  .catch((err) =>
-  {
+      category_name: req.body.category_name
+    }).then(newCatData => res.json(newCatData))
+  .catch((err) => {
     res.status(400).json(err);
   });
 });

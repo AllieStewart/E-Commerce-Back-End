@@ -9,7 +9,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 router.get('/', async (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
-    const productData = await Product.findAll( 
+    await Product.findAll( 
     {
       attributes: ["id", "product_name", "price", "stock", "category_id"],
       include: 
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
       ],
     }).then((productData) => 
     {
-      res.status(200).json(productData);
+      res.json(productData);
     }).catch(err => {
     res.status(500).json(err);
   });
@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
-    const productData = await Product.findByPk(req.params.id, 
+    await Product.findByPk(req.params.id, 
     {
       include: 
       [
@@ -57,7 +57,7 @@ router.get('/:id', async (req, res) => {
       res.status(404).json({ message: 'No product found with this id!' });
       return;
     }
-    res.status(200).json(productData);
+    res.json(productData);
   }).catch((err) =>
   {
     res.status(500).json(err);
@@ -91,7 +91,7 @@ router.post('/', async (req, res) => {
       {
         res.status(200).json(product);
       }
-    }).then((productTagIds) => res.status(200).json(productTagIds))
+    }).then((productTagIds) => res.json(productTagIds))
     .catch((err) => {
       res.status(400).json(err);
     });
@@ -131,7 +131,7 @@ router.put('/:id', async (req, res) => {
           ]);
         });
       }
-    }).then((newProductTags) => res.status(200).json(product))
+    }).then((newProductTags) => res.json(newProductTags))
     .catch((err) => {
       res.status(400).json(err);
     });
@@ -151,7 +151,7 @@ router.delete('/:id', async (req, res) => {
         res.status(404).json({ message: 'No product found with that id!' });
         return;
       }
-      res.status(200).json(productData);
+      res.json(productData);
     }).catch ((err) =>
   {
     res.status(500).json(err);
